@@ -19,7 +19,7 @@ background: -ms-radial-gradient(center, ellipse cover,  rgba(96,108,136,1) 35%,r
 background: url('../noise.png'), radial-gradient(ellipse at center,  rgba(96,108,136,1) 35%,rgba(63,76,107,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 
-	font-family: "Gotham HTF";
+	font-family: "proxima-nova", sans-serif;
 }
 
 header {
@@ -27,7 +27,7 @@ header {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-bottom: 1em;
-	padding: 0.5em 5%;
+	padding: 0.5em 2.5%;
 	overflow: auto;
 
 	h1 {
@@ -40,12 +40,20 @@ header {
 	a {
 		float: right;
 		display: block;
-		width: 20%;
+		width: 2em;
+		text-decoration: none;
+		color: #fff;
+		font-weight: bold;
+		text-align: center;
+
+
 	}
 
 	.new {
-		border-radius: 50%;
 		border: 1px solid #455170;
+		border-radius: 2px;
+		background: black;
+		padding: 0.25em 0.5em;
 	}
 }
 
@@ -62,10 +70,20 @@ header {
 	color: #cc0000;
 }
 
+#search {
+	display: block;
+	border-radius: 3px;
+	border: 1px solid #374259;
+	box-shadow: inset 0 1px 10px rgba(0,0,0,0.4);
+	padding: 1em 0.5em 0;
+	margin-bottom: 1em;
+	background-color: rgba(0,0,0,0.1);
+}
+
 label {
-	font-size: 0.8em;
+	font-size: 0.6em;
 	color: #fff;
-	text-variant: small-caps;
+	text-transform: uppercase;
 	margin-bottom: 0.5em;
 	display: block;
 }
@@ -75,35 +93,179 @@ input[type="text"] {
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 4px;
+	box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
 	border: 1px solid #374259;
 	padding: 3px 5px;
+	font-size: 1.2em;
+	line-height: 1.5;
+	margin-bottom: 0.5em;
+}
+
+::-webkit-input-placeholder {
+	color: #ccc;
+	font-family: "proxima-nova";
+	font-weight: 200;
+}
+
+button {
+	-webkit-appearance: none;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #374259;
+	color: #fff;
+	background-color: #505c79;
+	padding: 3px 5p;
 	font-size: 1.5em;
 	line-height: 1.5;
 	margin-bottom: 0.5em;
 }
 
-.actors {}
+.actors {
 
-.actors div {
-	border-radius: 50px;
-	border: 1px solid #455170;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.4);
-	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	.wrapper {
+		width:90px;
+		height: 90px;
+		overflow: hidden;
+		border-radius: 90px;
+		border: 2px solid #455170;
+		margin-bottom: 0.5em;
+		// box-shadow: 0 2px 12px rgba(0,0,0,0.66);
+
+	}
+
+
+	h1 {
+		font-size: 0.8em;
+		font-weight: 200;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 0.5em;
+	}
+
+	border-bottom: 3px solid #455170;
+	width: 90%;
+	margin: 0 auto 1em;
+	overflow:auto;
+	position: relative;
+
 }
 
-.actors img {
 
-		border: 5px solid #fff;
-		text-align: center;
+
+.actors img {
 }
 
 
 .first {
 	float: left;
-	width: 50%;
+	position: relative;
+
+	span {
+		background-image: url('../gosling.jpg');
+		position: absolute;
+		display: block;
+		background-color: #fff;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 1px solid rgba(255,255,255,0.7);
+		top: 0;
+		left: 0;
+		width: 90px;
+		height: 90px;
+		border-radius: 45px;	
+	}
 }
+
 
 .second {
 	float: right;
-	width: 50%;
+	position: relative;
+
+	span {
+		background-image: url('../carey.jpg');
+		position: absolute;
+		display: block;
+		background-color: #fff;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 1px solid rgba(255,255,255,0.7);
+		top: 0;
+		left: 0;
+		width: 90px;
+		height: 90px;
+		border-radius: 45px;	
+	}	
+}
+
+.ampersand {
+	color: #fff;
+	font-size: 2em;
+	font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  	font-style: italic;
+  	display: inline-block;
+  	text-align: center;
+  	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 30px;
+  	margin: auto;
+}
+
+
+.film {
+	width:150px;
+	height: 150px;
+	// overflow: hidden;
+	border-radius: 150px;
+	border: 2px solid #455170;
+	box-shadow: inset 0 0 2px rgab(255,255,255,1);
+	text-align: center;
+	margin: 0 auto 1em;
+	position: relative;
+
+	span {
+		background-image: url('../gangster-squad.jpg');
+		position: absolute;
+		display: block;
+		background-color: #fff;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 1px solid rgba(255,255,255,0.7);
+		top: 0;
+		left: 0;
+		width: 148px;
+		height: 148px;
+		border-radius: 74px;
+	}
+}
+
+.film:before {
+	content: "|";
+	color: #455170;
+	font-size: 5em;
+	position: absolute;
+	top: -30px;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+
+
+footer {
+	clear: both;
+	color: #fff;
+	font-weight: 200;
+	font-size: 0.7em;
+	text-align: center;
+
+	h6 {
+		margin-bottom: 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	}
 }
