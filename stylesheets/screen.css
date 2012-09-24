@@ -183,23 +183,23 @@ input[type="text"] {
 button {
   -webkit-appearance: none;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 24px;
   border: 1px solid #374259;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.3);
   background-color: #505c79;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4a5979), color-stop(100%, #374259));
-  background-image: -webkit-linear-gradient(#4a5979, #374259);
-  background-image: -moz-linear-gradient(#4a5979, #374259);
-  background-image: -o-linear-gradient(#4a5979, #374259);
-  background-image: linear-gradient(#4a5979, #374259);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #414e69), color-stop(100%, #374259));
+  background-image: -webkit-linear-gradient(#414e69, #374259);
+  background-image: -moz-linear-gradient(#414e69, #374259);
+  background-image: -o-linear-gradient(#414e69, #374259);
+  background-image: linear-gradient(#414e69, #374259);
   padding: 10px 15px;
   font-size: 1.2em;
-  line-height: 1.5;
+  line-height: 1;
   margin-bottom: 0.5em;
   -webkit-box-shadow: inset 0 1px 1px #374259;
   -moz-box-shadow: inset 0 1px 1px #374259;
   box-shadow: inset 0 1px 1px #374259;
-  font-family: "proxima-nova";
+  font-family: "ff-prater-script-web";
 }
 
 /* line 126, ../sass/screen.scss */
