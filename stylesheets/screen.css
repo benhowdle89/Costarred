@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
   background: #475473;
   background: #606c88;
@@ -88,10 +88,11 @@ body {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 );
   /* IE6-8 fallback on horizontal gradient */
+  color: #fff;
   font-family: "proxima-nova", sans-serif;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -100,7 +101,7 @@ header {
   text-align: center;
   border-top: 5px solid #374259;
 }
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 header h1 {
   color: #374259;
   font-size: 4em;
@@ -109,7 +110,7 @@ header h1 {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .wrap {
   width: 100%;
   margin: auto;
@@ -117,18 +118,24 @@ header h1 {
   box-sizing: border-box;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .star {
   color: #cc0000;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 #search {
   width: 90%;
   margin: auto;
 }
-
 /* line 64, ../sass/screen.scss */
+#search p {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* line 71, ../sass/screen.scss */
 .inputs {
   display: block;
   border-radius: 4px;
@@ -139,14 +146,14 @@ header h1 {
   background-color: #fff;
   margin-bottom: 1em;
 }
-/* line 73, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .inputs .separator {
   width: 90%;
   margin: auto;
   border-top: 1px solid #ccc;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 label {
   font-size: 0.6em;
   color: #fff;
@@ -155,7 +162,7 @@ label {
   display: block;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 input[type="text"] {
   -webkit-appearance: none;
   width: 100%;
@@ -170,7 +177,7 @@ input[type="text"] {
   font-family: "proxima-nova";
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 ::-webkit-input-placeholder {
   color: #ccc;
   font-family: "proxima-nova";
@@ -179,50 +186,64 @@ input[type="text"] {
   letter-spacing: 1px;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 button {
   -webkit-appearance: none;
   width: 100%;
   border-radius: 24px;
-  border: 1px solid #374259;
-  color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #842b00;
+  color: #fff;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   background-color: #505c79;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #414e69), color-stop(100%, #374259));
-  background-image: -webkit-linear-gradient(#414e69, #374259);
-  background-image: -moz-linear-gradient(#414e69, #374259);
-  background-image: -o-linear-gradient(#414e69, #374259);
-  background-image: linear-gradient(#414e69, #374259);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffa900), color-stop(100%, #e34b00));
+  background-image: -webkit-linear-gradient(#ffa900, #e34b00);
+  background-image: -moz-linear-gradient(#ffa900, #e34b00);
+  background-image: -o-linear-gradient(#ffa900, #e34b00);
+  background-image: linear-gradient(#ffa900, #e34b00);
   padding: 10px 15px;
   font-size: 1.2em;
   line-height: 1;
-  margin-bottom: 0.5em;
-  -webkit-box-shadow: inset 0 1px 1px #374259;
-  -moz-box-shadow: inset 0 1px 1px #374259;
-  box-shadow: inset 0 1px 1px #374259;
+  margin-bottom: 1em;
+  -webkit-box-shadow: inset 0 1px 1px #ffd300;
+  -moz-box-shadow: inset 0 1px 1px #ffd300;
+  box-shadow: inset 0 1px 1px #ffd300;
   font-family: "ff-prater-script-web";
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
+button:active {
+  -webkit-box-shadow: inset 0 1px 1px #e34b00;
+  -moz-box-shadow: inset 0 1px 1px #e34b00;
+  box-shadow: inset 0 1px 1px #e34b00;
+}
+
+/* line 141, ../sass/screen.scss */
 .actors {
+  overflow: hidden;
+  *zoom: 1;
   border-bottom: 3px solid #455170;
   width: 90%;
   margin: 0 auto 1em;
-  overflow: auto;
   position: relative;
 }
-/* line 128, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .actors .wrapper {
   width: 90px;
   height: 90px;
   overflow: hidden;
-  border-radius: 90px;
+  -webkit-border-radius: 47px;
+  -moz-border-radius: 47px;
+  -ms-border-radius: 47px;
+  -o-border-radius: 47px;
+  border-radius: 47px;
   border: 2px solid #455170;
   margin-bottom: 0.5em;
   -webkit-transition: all 1s ease;
   -webkit-animation-duration: 2s;
   -webkit-animation-name: rollIn;
 }
-/* line 144, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .actors h1 {
   font-size: 0.8em;
   font-weight: 200;
@@ -231,15 +252,16 @@ button {
   margin-bottom: 0.5em;
 }
 
-/* line 166, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .first {
   float: left;
   position: relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: slideInLeft;
 }
-/* line 170, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .first span {
   background-image: url("../gosling.jpg");
-  position: absolute;
   display: block;
   background-color: #fff;
   background-position: 50% 50%;
@@ -248,20 +270,25 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.7);
   top: 0;
   left: 0;
-  width: 90px;
-  height: 90px;
-  border-radius: 45px;
+  width: 88px;
+  height: 88px;
+  -webkit-border-radius: 46px;
+  -moz-border-radius: 46px;
+  -ms-border-radius: 46px;
+  -o-border-radius: 46px;
+  border-radius: 46px;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .second {
   float: right;
   position: relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: slideInRight;
 }
-/* line 192, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .second span {
   background-image: url("../carey.jpg");
-  position: absolute;
   display: block;
   background-color: #fff;
   background-position: 50% 50%;
@@ -270,12 +297,16 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.7);
   top: 0;
   left: 0;
-  width: 90px;
-  height: 90px;
-  border-radius: 45px;
+  width: 88px;
+  height: 88px;
+  -webkit-border-radius: 46px;
+  -moz-border-radius: 46px;
+  -ms-border-radius: 46px;
+  -o-border-radius: 46px;
+  border-radius: 46px;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .ampersand {
   color: #fff;
   font-size: 3em;
@@ -291,7 +322,7 @@ button {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .film {
   width: 150px;
   height: 150px;
@@ -304,7 +335,7 @@ button {
   margin: 0 auto 1em;
   position: relative;
 }
-/* line 236, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .film span {
   background-image: url("../gangster-squad.jpg");
   position: absolute;
@@ -321,7 +352,7 @@ button {
   border-radius: 74px;
 }
 
-/* line 253, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .film:before {
   content: "|";
   color: #455170;
@@ -333,7 +364,26 @@ button {
   margin: auto;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
+.no-results {
+  color: #fff;
+  width: 90%;
+  margin: 0 auto 1em;
+  font-size: 0.9em;
+}
+/* line 286, ../sass/screen.scss */
+.no-results h1 {
+  font-family: "ff-prater-script-web";
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+/* line 293, ../sass/screen.scss */
+.name {
+  font-weight: bold;
+}
+
+/* line 300, ../sass/screen.scss */
 footer {
   clear: both;
   color: #fff;
@@ -341,7 +391,7 @@ footer {
   font-size: 0.7em;
   text-align: center;
 }
-/* line 273, ../sass/screen.scss */
+/* line 307, ../sass/screen.scss */
 footer h6 {
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -350,13 +400,37 @@ footer h6 {
 }
 
 @-webkit-keyframes rollIn {
-  /* line 282, ../sass/screen.scss */
+  /* line 316, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 286, ../sass/screen.scss */
+  /* line 320, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slideInLeft {
+  /* line 326, ../sass/screen.scss */
+  from {
+    margin-left: -50em;
+  }
+
+  /* line 330, ../sass/screen.scss */
+  to {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  /* line 336, ../sass/screen.scss */
+  from {
+    margin-right: -50em;
+  }
+
+  /* line 339, ../sass/screen.scss */
+  to {
+    margin-right: 0;
   }
 }
