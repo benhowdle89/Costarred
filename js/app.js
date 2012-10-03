@@ -21,7 +21,7 @@ jQuery(function( $ ) {
 			this.films = [];
 			this.actors =  [];
 			this.titles = [];
-			this.doRender - [];
+			this.doRender = [];
 			this.classTranslate = ['first', 'second'];
 			this.cacheElements();
 			this.bindEvents();
