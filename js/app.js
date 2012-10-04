@@ -18,7 +18,7 @@ jQuery(function( $ ) {
 		init: function() {
 			this.apiKey = '23afca60ebf72f8d88cdcae2c4f31866';
 			this.baseUrl = 'http://api.themoviedb.org/3/';
-			this.imageUrl = 'http://cf2.imgobject.com/t/p/w185/';
+			this.imageUrl = '';
 			this.films = [];
 			this.actors =  [];
 			this.titles = [];
@@ -27,12 +27,23 @@ jQuery(function( $ ) {
 			this.cacheElements();
 			this.bindEvents();
 			this.setupUi();
+			this.getConfig();
 		},
 		buildPersonSearchUrl: function(person){
 			return this.baseUrl + 'search/person?query=' + person + '&api_key=' + this.apiKey; 
 		},
 		buildMovieListUrl: function(id){
 			return this.baseUrl + 'person/' + id + '/credits?api_key=' + this.apiKey; 
+		},
+		buildConfigUrl: function(){
+			return this.baseUrl + 'configuration?api_key=' + this.apiKey; 
+		},
+		getConfig: function(){
+			var that = this;
+			Utils.ajax(this.buildConfigUrl(), that.saveConfig, that);
+		},
+		saveConfig: function(json){
+			this.imageUrl = json.images.base_url + 'w185/';
 		},
 		storeActor: function(json){
 			var that = this;
