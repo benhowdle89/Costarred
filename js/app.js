@@ -47,6 +47,10 @@ jQuery(function( $ ) {
 		},
 		storeActor: function(json){
 			var that = this;
+			if(!json.results.length){
+				that.renderEmptyResults();
+				return false;
+			}
 			var id = json.results[0].id;
 			var name = json.results[0].name;
 			var profile = that.imageUrl + json.results[0].profile_path;
@@ -100,6 +104,7 @@ jQuery(function( $ ) {
 			this.$controls = $('.controls');
 			this.$noResults = $('.no-results');
 			this.$yesResults = $('.yes-results');
+			this.$emptyResults = $('.empty-results');
 			this.$errorFirstActor = $('#firstActor', this.$noResults);
 			this.$errorSecondActor = $('#secondActor', this.$noResults);
 			this.$inputs = $('.inputs input[type="text"]');
@@ -126,16 +131,24 @@ jQuery(function( $ ) {
 		},
 		setupUi: function(){
 			this.$noResults.hide();
+			this.$emptyResults.hide();
 		},
 		renderResults: function(){
 			this.$films.html( this.filmTemplate( this.films ) );
 			this.$actors.html( this.actorTemplate( this.actors ) );
 			this.$noResults.hide();
+			this.$emptyResults.hide();
 			this.$yesResults.show();
 		},
 		renderNoResults: function(){
 			this.$noResults.show();
+			this.$emptyResults.hide();
 			this.$yesResults.hide();
+		},
+		renderEmptyResults: function(){
+			this.$noResults.hide();
+			this.$yesResults.hide();
+			this.$emptyResults.show();
 		}
 	};
 
