@@ -48,7 +48,7 @@
 	<section id="results">
 		<div class="no-results">
 			<h1>Aww shucks!</h1> 
-			<p><span class="name">Ryan Gosling</span> and <span class="name">Emma Stone</span> have yet to appear in a film together.</p>
+			<p><span id="firstActor" class="name">Ryan Gosling</span> and <span id="secondActor" class="name">Emma Stone</span> have yet to appear in a film together.</p>
 			<!-- <span class="ampersand">&amp;</span>	 -->
 		</div>
 		<div class="yes-results">
@@ -70,7 +70,7 @@
 	<script id="film-template" type="text/x-handlebars-template">
 	{{#this}}
 	<div class="film">
-		<span>{{title}}</span>
+		<span style="background-image: url({{poster}})"></span>
 	</div>
 	{{/this}}
 	</script>
@@ -79,7 +79,7 @@
 	{{#this}}
 	<div class="{{actorClass}}">
 		<div class="wrapper">
-			<span></span>
+			<span style="background-image: url({{profile}})"></span>
 		</div>
 		<h1>{{name}}</h1>
 	</div>	
