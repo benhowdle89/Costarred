@@ -5,6 +5,21 @@
 $blue: #374259;
 $lightBlue: lighten($blue, 5%);
 
+@mixin ampersand {
+	color: #fff;
+	font-size: 3em;
+	font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  	font-style: italic;
+  	display: inline-block;
+  	text-align: center;
+  	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 30px;
+  	margin: auto;
+  	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
 body {
 	background: #475473;
 	background: rgb(96,108,136); /* Old browsers */
@@ -166,6 +181,11 @@ button:active {
 	//overflow:auto;
 	position: relative;
 
+	&:after {
+		content: "&";
+		@include ampersand;
+	}
+
 }
 
 
@@ -216,20 +236,6 @@ button:active {
 	}	
 }
 
-.ampersand {
-	color: #fff;
-	font-size: 3em;
-	font-family: Baskerville, Palatino, "Book Antiqua", serif;
-  	font-style: italic;
-  	display: inline-block;
-  	text-align: center;
-  	position: absolute;
-  	left: 0;
-  	right: 0;
-  	top: 30px;
-  	margin: auto;
-  	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
-}
 
 
 .film {
@@ -272,7 +278,7 @@ button:active {
 }
 
 
-.no-results {
+.no-results, .empty-results {
 	color: #fff;
 	width: 90%;
 	margin: 0 auto 1em;
@@ -282,6 +288,7 @@ button:active {
 		font-family: "ff-prater-script-web";
 		font-size: 1.5rem;
 		margin-bottom: 0.5em;
+		text-align: center;
 	}
 }
 
