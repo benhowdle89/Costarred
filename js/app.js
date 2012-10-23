@@ -130,7 +130,6 @@ jQuery(function( $ ) {
 				if($(this).val() == '') return;
 				Utils.ajax(that.buildPersonSearchUrl($(this).val()), that.storeActor, that);
 			});
-			this.toggleLoading();
 		},
 		setupUi: function(){
 			this.$noResults.hide();
@@ -143,6 +142,7 @@ jQuery(function( $ ) {
 			this.$actors.html( this.actorTemplate( this.actors ) );
 			this.$noResults.hide();
 			this.$emptyResults.hide();
+			this.toggleLoading();
 			this.$yesResults.show();
 		},
 		renderNoResults: function(){
