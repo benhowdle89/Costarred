@@ -125,10 +125,12 @@ jQuery(function( $ ) {
 			that.films = [];
 			that.titles = [];
 			this.doRender = [];
+			this.toggleLoading();
 			this.$inputs.each(function(){
 				if($(this).val() == '') return;
 				Utils.ajax(that.buildPersonSearchUrl($(this).val()), that.storeActor, that);
 			});
+			this.toggleLoading();
 		},
 		setupUi: function(){
 			this.$noResults.hide();
