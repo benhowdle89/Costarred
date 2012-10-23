@@ -134,6 +134,7 @@ jQuery(function( $ ) {
 			this.$noResults.hide();
 			this.$yesResults.hide();
 			this.$emptyResults.hide();
+			this.$loading.hide();
 		},
 		renderResults: function(){
 			this.$films.html( this.filmTemplate( this.films ) );
@@ -151,6 +152,13 @@ jQuery(function( $ ) {
 			this.$noResults.hide();
 			this.$yesResults.hide();
 			this.$emptyResults.show();
+		},
+		toggleLoading: function(){
+			if(this.$loading.is(':hidden')){
+				this.$loading.show();
+			} else {
+				this.$loading.hide();
+			}
 		}
 	};
 
