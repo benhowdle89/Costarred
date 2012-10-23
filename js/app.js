@@ -30,13 +30,13 @@ jQuery(function( $ ) {
 			this.getConfig();
 		},
 		buildPersonSearchUrl: function(person){
-			return this.baseUrl + 'search/person?query=' + person + '&api_key=' + this.apiKey; 
+			return this.baseUrl + 'search/person?query=' + person + '&api_key=' + this.apiKey;
 		},
 		buildMovieListUrl: function(id){
-			return this.baseUrl + 'person/' + id + '/credits?api_key=' + this.apiKey; 
+			return this.baseUrl + 'person/' + id + '/credits?api_key=' + this.apiKey;
 		},
 		buildConfigUrl: function(){
-			return this.baseUrl + 'configuration?api_key=' + this.apiKey; 
+			return this.baseUrl + 'configuration?api_key=' + this.apiKey;
 		},
 		getConfig: function(){
 			var that = this;
@@ -54,7 +54,7 @@ jQuery(function( $ ) {
 			var id = json.results[0].id;
 			var name = json.results[0].name;
 			var profile = that.imageUrl + json.results[0].profile_path;
-			var i = (this.actors.length == 1) ? 1 : 0;
+			var i = (this.actors.length === 1) ? 1 : 0;
 			var data = {
 				id: id,
 				name: name,
@@ -127,7 +127,7 @@ jQuery(function( $ ) {
 			this.doRender = [];
 			this.toggleLoading();
 			this.$inputs.each(function(){
-				if($(this).val() == '') return;
+				if($(this).val() === '') return;
 				Utils.ajax(that.buildPersonSearchUrl($(this).val()), that.storeActor, that);
 			});
 		},
