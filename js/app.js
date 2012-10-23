@@ -75,7 +75,7 @@ jQuery(function( $ ) {
 			if(this.doRender.length > 1){
 				this.getMatches(this.films);
 				if(this.films.length){
-					this.renderResults();	
+					this.renderResults();
 				} else {
 					this.populateErrors();
 					this.renderNoResults();
@@ -105,6 +105,7 @@ jQuery(function( $ ) {
 			this.$noResults = $('.no-results');
 			this.$yesResults = $('.yes-results');
 			this.$emptyResults = $('.empty-results');
+			this.$loading = $('#loading');
 			this.$errorFirstActor = $('#firstActor', this.$noResults);
 			this.$errorSecondActor = $('#secondActor', this.$noResults);
 			this.$inputs = $('.inputs input[type="text"]');
@@ -131,6 +132,7 @@ jQuery(function( $ ) {
 		},
 		setupUi: function(){
 			this.$noResults.hide();
+			this.$yesResults.hide();
 			this.$emptyResults.hide();
 		},
 		renderResults: function(){
