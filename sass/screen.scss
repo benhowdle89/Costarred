@@ -305,6 +305,10 @@ footer {
 	font-weight: 200;
 	font-size: 0.5em;
 	text-align: center;
+	
+	a {
+		color: lighten(#475473, 10%);
+	}
 
 	h6 {
 		margin-bottom: 1em;
