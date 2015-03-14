@@ -1,6 +1,4 @@
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/utilities";
+@import "bourbon/bourbon";
 
 $blue: #374259;
 $lightBlue: lighten($blue, 5%);
@@ -58,6 +56,7 @@ header {
 
 .wrap {
 	width: 100%;
+	max-width: 30em;
 	margin: auto;
 	padding: 0 5%;
 	box-sizing: border-box;
@@ -155,7 +154,7 @@ button:active {
 		width:90px;
 		height: 90px;
 		overflow: hidden;
-		@include border-radius(47px);
+		border-radius: 47px;
 		border: 2px solid #455170;
 		margin-bottom: 0.5em;
 		// box-shadow: 0 2px 12px rgba(0,0,0,0.66);
@@ -193,7 +192,7 @@ button:active {
 	float: left;
 	position: relative;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-name: slideInLeft;	
+	-webkit-animation-name: slideInLeft;
 
 	span {
 		background-image: url('../gosling.jpg');
@@ -208,7 +207,7 @@ button:active {
 		left: 0;
 		width: 88px;
 		height: 88px;
-		@include border-radius(46px);	
+		border-radius: 46px;
 	}
 }
 
@@ -232,8 +231,8 @@ button:active {
 		left: 0;
 		width: 88px;
 		height: 88px;
-		@include border-radius(46px);	
-	}	
+		border-radius: 46px;
+	}
 }
 
 
@@ -305,9 +304,9 @@ footer {
 	font-weight: 200;
 	font-size: 0.5em;
 	text-align: center;
-	
+
 	a {
-		color: lighten(#475473, 10%);
+		color: #ffa900;
 	}
 
 	h6 {
