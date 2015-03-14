@@ -151,6 +151,13 @@ button:active {
 .actors {
 	@include clearfix;
 
+	border-bottom: 3px solid #455170;
+	height: 130px;
+	width: 90%;
+	margin: 0 auto 1em;
+	//overflow:auto;
+	position: relative;
+
 	.wrapper {
 		width:90px;
 		height: 90px;
@@ -174,12 +181,6 @@ button:active {
 		color: #fff;
 		margin-bottom: 0.5em;
 	}
-
-	border-bottom: 3px solid #455170;
-	width: 90%;
-	margin: 0 auto 1em;
-	//overflow:auto;
-	position: relative;
 
 	&:after {
 		content: "&";
